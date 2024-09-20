@@ -1,0 +1,5 @@
+kivy
+kivy-garden
+kivy-garden.matplotlib
+kivymd
+yt-dlp
