@@ -33,7 +33,7 @@ pip install -r requirements.txt
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/yourusername/yt-downloader-kivy.git
+git clone [https://github.com/Sarwarhridoy4/YT_Downloader_Kivy](https://github.com/Sarwarhridoy4/YT_Downloader_Kivy)
 cd yt-downloader-kivy
 ```
 
@@ -58,7 +58,7 @@ python main.py
 3. Click on `Select Video Quality` to choose the desired quality.
 4. Click on `Select Destination Folder` to specify where the video will be downloaded.
 5. Press the `Download` button to start downloading the video.
-6. The app will display the download progress and the estimated time to complete (ETA).
+6. The app will display the download progress and the estimated completion time (ECT).
 
 ## Project Structure
 
@@ -87,5 +87,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any issues or inquiries, feel free to reach out:
 
-- **Email**: youremail@example.com
-- **GitHub**: [yourusername](https://github.com/yourusername)
+- **Email**: sarwarhridoy4@gmail.com
+- **GitHub**: [yourusername]([https://github.com/Sarwarhridoy4](https://github.com/Sarwarhridoy4))
