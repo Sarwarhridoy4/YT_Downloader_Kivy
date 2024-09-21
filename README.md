@@ -3,7 +3,6 @@
 
 This is a simple and elegant YouTube Video Downloader built using `Kivy` and `KivyMD`. The app allows users to input a YouTube video URL, select the desired video quality, and choose a destination folder to download the video. It features a clean UI with download progress tracking and estimated time of arrival (ETA) for downloads.
 
-![App_Screenshot](./assets/Screenshot.png)
 
 
 ## Features
@@ -74,8 +73,7 @@ YT_Downloader_Kivy/
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screen1.png)
-![Screenshot 2](screenshots/screen2.png)
+![App_Screenshot](./assets/Screenshot.png)
 
 ## Contributing
 
