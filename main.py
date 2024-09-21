@@ -23,7 +23,7 @@ ScreenManager:
     DownloaderScreen:
 
 <DownloaderScreen>:
-    name: "downloader"
+    name: "YT Downloader"
 
     MDBoxLayout:
         orientation: "vertical"
@@ -34,7 +34,7 @@ ScreenManager:
             text: "YouTube Video Downloader"
             halign: "center"
             theme_text_color: "Custom"
-            text_color: 1, 1, 1, 1
+            text_color: 0, 0, 0, 1
             font_style: "H4"
 
         MDTextField:
@@ -80,10 +80,8 @@ ScreenManager:
             halign: "center"
 '''
 
-
 class DownloaderScreen(Screen):
     pass
-
 
 class DownloaderApp(MDApp):
     destination_folder = ObjectProperty(None)
@@ -94,19 +92,21 @@ class DownloaderApp(MDApp):
         return Builder.load_string(KV)
 
     def open_quality_dropdown(self):
-        # Define dropdown menu items with video height options
+        # Define dropdown menu items with video height options including 4K
         quality_options = [
-            {"text": "1080p", "callback": lambda x: self.set_quality('1080')},
-            {"text": "720p", "callback": lambda x: self.set_quality('720')},
-            {"text": "480p", "callback": lambda x: self.set_quality('480')},
-            {"text": "360p", "callback": lambda x: self.set_quality('360')},
+            {"text": "2160p (4K)", "value": '2160'},
+            {"text": "1440p", "value": '1440'},
+            {"text": "1080p", "value": '1080'},
+            {"text": "720p", "value": '720'},
+            {"text": "480p", "value": '480'},
+            {"text": "360p", "value": '360'},
         ]
 
         menu_items = [
             {
                 "viewclass": "OneLineListItem",
                 "text": option["text"],
-                "on_release": lambda x=option: option["callback"](x)
+                "on_release": lambda x=option: self.set_quality(x["value"])
             } for option in quality_options
         ]
 
@@ -164,10 +164,10 @@ class DownloaderApp(MDApp):
             with YoutubeDL(ydl_opts) as ydl:
                 ydl.download([url])
         except DownloadError:
-            self.show_message("An error occurred during the download process.")
+            Clock.schedule_once(lambda dt: self.show_message("An error occurred during the download process."), 0)
             return
 
-        self.show_message("Download complete!")
+        Clock.schedule_once(lambda dt: self.show_message("Download complete!"), 0)
 
     def progress_hook(self, d):
         if d['status'] == 'downloading':
@@ -187,8 +187,7 @@ class DownloaderApp(MDApp):
         self.root.get_screen('downloader').ids.progress_bar.value = value
 
     def update_eta_label(self, eta):
-        self.root.get_screen(
-            'downloader').ids.eta_label.text = f"ETA: {eta} seconds" if eta != 'Complete' else "ETA: Complete"
+        self.root.get_screen('downloader').ids.eta_label.text = f"ETA: {eta} seconds" if eta != 'Complete' else "ETA: Complete"
 
     def show_message(self, message):
         popup = Popup(
@@ -197,7 +196,6 @@ class DownloaderApp(MDApp):
             size_hint=(0.7, 0.3),
         )
         popup.open()
-
 
 if __name__ == '__main__':
     DownloaderApp().run()
