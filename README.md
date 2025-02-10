@@ -17,13 +17,14 @@ This is a YouTube Video Downloader application built using Kivy and KivyMD. It a
 - KivyMD
 - yt-dlp
 - ffmpeg-python
+- ffmpeg
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/Sarwarhridoy4/Youtube_Video_Downloader
+   cd Youtube_Video_Downloader
    ```
 
 2. Create a virtual environment and activate it:
