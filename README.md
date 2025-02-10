@@ -39,9 +39,12 @@ This is a YouTube Video Downloader application built using Kivy and KivyMD. It a
    ```
 
 4. Install FFMPEG:
+   - For linux 
    ```bash
    sudo apt-get install ffmpeg
    ```
+   - For Windows(10/11 and upper)
+   
    ```bash
     winget install Gyan.FFmpeg
    ```
