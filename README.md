@@ -1,91 +1,68 @@
+# YouTube Video Downloader
 
-# YouTube Video Downloader - Kivy
-
-This is a simple and elegant YouTube Video Downloader built using `Kivy` and `KivyMD`. The app allows users to input a YouTube video URL, select the desired video quality, and choose a destination folder to download the video. It features a clean UI with download progress tracking and estimated time of arrival (ETA) for downloads.
-
-
+This is a YouTube Video Downloader application built using Kivy and KivyMD. It allows users to download YouTube videos in various qualities and save them to a specified folder.
 
 ## Features
 
-- **Responsive UI**: The app provides a responsive user interface using `KivyMD`.
-- **Video Quality Selection**: Allows users to select different video qualities (144p, 240p, 360p, 480p, 720p, 1080p, 2k, 4k).
-- **Destination Folder Selection**: Users can select the destination folder where the downloaded video will be saved.
-- **Download Progress**: Displays download progress in real-time with a progress bar and ETA.
-- **Multi-platform**: Works on Windows, macOS, Linux, and Android.
+- Download YouTube videos in different quality options: Best, Medium, and Low.
+- Save videos in `.mp4` format.
+- Simple and intuitive user interface.
+- Progress bar to show download progress.
+- Option to select the destination folder for downloads.
 
-## Prerequisites
+## Requirements
 
-Ensure that you have the following installed:
+- Python 3.x
+- Kivy
+- KivyMD
+- yt-dlp
+- ffmpeg-python
 
-- Python 3.7+
-- `Kivy` and `KivyMD`
-- `yt-dlp` for downloading videos
-- `plyer` (optional for file chooser functionality on some platforms)
+## Installation
 
-To install the necessary dependencies, run:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+2. Create a virtual environment and activate it:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+   ```
 
-## Installation and Setup
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-1. **Clone the repository**:
+## Usage
 
-```bash
-git clone [https://github.com/Sarwarhridoy4/YT_Downloader_Kivy](https://github.com/Sarwarhridoy4/YT_Downloader_Kivy)
-cd yt-downloader-kivy
-```
+1. Run the application:
+   ```bash
+   python main.py
+   ```
 
-2. **Install Dependencies**:
+2. Enter the YouTube video URL in the input field.
 
-Install the required Python packages using pip:
+3. Select the desired video quality.
 
-```bash
-pip install -r requirements.txt
-```
+4. Choose the destination folder where you want to save the video.
 
-3. **Run the Application**:
-
-```bash
-python main.py
-```
-
-## How to Use
-
-1. Launch the application.
-2. Enter the YouTube video URL in the provided text field.
-3. Click on `Select Video Quality` to choose the desired quality.
-4. Click on `Select Destination Folder` to specify where the video will be downloaded.
-5. Press the `Download` button to start downloading the video.
-6. The app will display the download progress and the estimated completion time (ECT).
-
-## Project Structure
-
-```
-YT_Downloader_Kivy/
-│
-├── main.py                     # Main Python file that contains the app logic
-├── README.md                   # This file
-├── requirements.txt            # Python package requirements
-└── assets/                     # Optional folder for storing assets (if any)
-```
-
-## Screenshots
-
-![App_Screenshot](./assets/Screenshot.png)
+5. Click the "Download" button to start downloading the video.
 
 ## Contributing
 
-If you want to contribute to this project, feel free to submit a pull request. Contributions are always welcome!
+Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+## Acknowledgments
 
-For any issues or inquiries, feel free to reach out:
-
-- **Email**: sarwarhridoy4@gmail.com
-- **GitHub**: [yourusername]([https://github.com/Sarwarhridoy4](https://github.com/Sarwarhridoy4))
+- [Kivy](https://kivy.org/)
+- [KivyMD](https://kivymd.readthedocs.io/en/latest/)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+- [ffmpeg-python](https://github.com/kkroening/ffmpeg-python)
