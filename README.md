@@ -37,9 +37,19 @@ This is a YouTube Video Downloader application built using Kivy and KivyMD. It a
    pip install -r requirements.txt
    ```
 
+4. Install FFMPEG:
+   ```bash
+   sudo apt-get install ffmpeg
+   ```
+   ```bash
+    winget install Gyan.FFmpeg
+   ```
+
+
 ## Usage
 
 1. Run the application:
+
    ```bash
    python main.py
    ```
@@ -66,3 +76,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [KivyMD](https://kivymd.readthedocs.io/en/latest/)
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [ffmpeg-python](https://github.com/kkroening/ffmpeg-python)
+- [FFMPEG](https://ffmpeg.org/)
+
+## Screenshots
+
+![App_Screenshot](./assets/screen.png)
